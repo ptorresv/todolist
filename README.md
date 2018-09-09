@@ -1,1 +1,3 @@
-# todolist
+# README
+
+Proyecto todolist - Curso
