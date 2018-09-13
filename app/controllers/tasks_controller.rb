@@ -20,6 +20,9 @@ class TasksController < ApplicationController
             render :new
         end
     end
+    def edit
+        @task = Task.find(params[:id])
+    end
 
     def task_params
         params.require(:task).permit(:tarea, :dateStart, :dateStop, :resposable, :estado)

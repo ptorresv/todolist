@@ -1,0 +1,30 @@
+<%= form_for(@task) do |f| %>
+    <p>
+      <%= f.label :tarea %><br>
+      <%= f.text_field :name %>
+    </p>
+   
+    <p>
+      <%= f.label :fecha_inicio %><br>
+      <%= f.date_field :dateStart %>
+    </p>
+
+    <p>
+      <%= f.label :fecha_termino %><br>
+      <%= f.date_field :dateStop %>
+    </p>
+   
+    <p>
+      <%= f.label :Responsable %><br>
+      <%= f.text_field :resposable %>
+    </p>
+    
+    <p>
+        <%= f.label :Estado %><br>
+        <%= f.select(:estado, [['Nuevo', 1], ['Trabajando', 2], ['Terminado', 3]], {}, { :class => 'my_style_class' }) %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
