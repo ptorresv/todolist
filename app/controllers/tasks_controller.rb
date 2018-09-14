@@ -26,12 +26,11 @@ class TasksController < ApplicationController
     
     def update
         @task = Task.find(params[:id])
-        @task.update_attributes(task_params)
-        if @task.estado == 3
+        if @task.estado == "3"
             @task.dateFinish = Time.now
             @task.save
         end
-
+        @task.update_attributes(task_params)
     end
 
     def task_params

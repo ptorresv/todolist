@@ -1,7 +1,33 @@
+<h1> Lista de tareas </h1>
+<%= link_to '<button type="button">Nueva Tarea</button>'.html_safe, new_task_path %>
+<table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Fecha Inicio Tarea</th> 
+    <th>Fecha Termino Tarea</th>
+    <th>Responsable</th> 
+    <th>Estado</th>
+    <th>Acciones</th>
+  </tr>
 <% @tasks.each do |task| %>
-  <p><%= task.name %></p>
-  <p><%= task.dateStart %></p>
-  <p><%= task.dateStop %></p>
-  <p><%= task.resposable %></p>
-  <p><%= task.estado %></p>
+  <tr>
+    <td><%= task.name %></td>
+    <td><%= task.dateStart %></td> 
+    <td><%= task.dateStop %></td>
+    <td><%= task.resposable %></td> 
+    <td>
+      <% case task.estado %>
+      <% when "1" %>
+      Nuevo
+      <% when "2" %>
+      Trabajando
+      <% when "3" %>
+      Terminado
+      <% end %>
+
+
+
+    </td>
+    <td><%= link_to '<button type="button">Editar</button>'.html_safe, edit_task_path(task) %></td>
+  </tr>
 <% end %>

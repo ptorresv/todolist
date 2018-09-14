@@ -1,6 +1,19 @@
-
-  <p><%= @task.name %></p>
-  <p><%= @task.dateStart %></p>
-  <p><%= @task.dateStop %></p>
-  <p><%= @task.resposable %></p>
-  <p><%= @task.estado %></p>
+ <h1> Detalle Tarea </h1>
+<table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Fecha Inicio Tarea</th> 
+    <th>Fecha Termino Tarea</th>
+    <th>Responsable</th> 
+    <th>Estado</th>
+  </tr>
+  <tr>
+    <th><%= @task.name %></th>
+    <th><%= @task.dateStart %></th> 
+    <th><%= @task.dateStop %></th>
+    <th><%= @task.resposable %></th> 
+    <th><%= @task.estado %></th>
+  </tr>
+</table>
+<%= link_to '<button type="button">Volver a Lista</button>'.html_safe, tasks_path %>
+<table style="width:100%">
