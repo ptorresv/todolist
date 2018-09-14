@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_13_003947) do
+ActiveRecord::Schema.define(version: 2018_09_14_003917) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2018_09_13_003947) do
     t.datetime "dateStop"
     t.string "resposable"
     t.string "estado"
+    t.datetime "dateFinish"
   end
 
 end
